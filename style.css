@@ -1,0 +1,112 @@
+/* RESET CSS - estilo geral da pagina */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+}
+.interface{ /* interface geral da pagina */
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{/* estilo geral do botão contato */
+    padding: 10px 40px; /* aumentando o tamanho do botão */
+    font-size: 18px;
+    font-weight: 550; /* aumentando a espessura da fonte */
+    background-color: #00ff08;
+    border: 0px; /* tirando a borda do botão */
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+/* estilo do cabeçalho */
+header{/* estilo geral do cabeçalho */
+    padding: 40px 4%;
+}
+/* colocando o logo, os links e o botão contato ladoa lado */
+header > .interface{ /* > indica que só a classe interface pertence ao header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* mudando a cor da fonte dos links (a) */
+header a{ /* a indica que o link pertence ao header */
+    color: #7d7d7d;
+    text-decoration: none; /* tirando o sublinhado dos links */
+    display: inline-block; /* deixando os links ladoa lado */
+    transition: .2s; /* adicionando transição aos links */
+}
+
+header a:hover{ 
+    color: #fff;
+    transform: scale(1.05); /* aumentando o tamanho dos links ao passar o mouse - só funciona no hover e transfomando os links em inline-block*/
+}
+/* tirando as bolinhas dos links dentro da ul */
+header nav ul{/* estilo geral da ul */
+    list-style-type: none; /* tirando as bolinhas */
+}
+header nav ul li{ /* estilo geral da li */
+    display: inline-block; /* deixando os links ladoa lado */
+    margin: 0 40px;
+}
+
+.btn-contato button:hover{ /* quando passar o mouse em cima do botão */
+    box-shadow: 0px 0px 8px #00ff08; /* adicionando sombra ao botão */
+    transform: scale(1.05);   /* aumentando o tamanho do botão ao passar o mouse */
+}
+
+/* ESTILO DOTOPODO SITE */
+
+section.topo-do-site{ /* estilo geral do topo do site */
+    padding: 40px 4%;
+}   
+
+section.topo-do-site .flex{ /* estilo geral do flex do topo do site */
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+}
+
+.topo-do-site  h1{ /* estilo geral do h1 do topo do site */
+    color: #fff;    
+    font-size: 42px;
+    line-height: 40px; /* altura da linha */
+}
+.topo-do-site  .txt-topo-site h1 span{ /* estilo geral do span do topo do site */
+    color: #00ff08;
+    font-size: 30px;
+}
+
+.topo-do-site .txt-topo-site p{ /* estilo geral do p do topo do site */
+    color: #fff;
+    margin: 40px 0;
+}
+
+
+.topo-do-site .img-topo-site img{ /* estilo geral da img do topo do site */
+    position: relative;
+    animation: flutuar 2.5s ease-in-out infinite alternate; /* animação do topo do site */
+
+}
+
+
+@keyframes flutuar{ /* animação do topo do site */
+    0%{
+        top: 0; /* posicao inicial - só funciona com position relative ou absolute - img */
+    }
+
+    100%{
+        top: 30px;
+    }
+    
+}
+
